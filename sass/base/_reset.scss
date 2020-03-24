@@ -1,0 +1,16 @@
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 1005;
+  margin: 0;
+  background: var(--base-background);
+  font-size: 13px;
+}
+
+input[type='text'] {
+  outline: none;
+  &:focus {
+    border: 1px solid var(--focus-outline-color);
+  }
+}

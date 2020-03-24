@@ -1,0 +1,88 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: $default-padding;
+}
+
+.table tr {
+  color: var(--base-color);
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--table-row-bgcolor);
+}
+
+.table tbody tr:hover {
+  background-color: var(--bg-secondary) !important;
+  transition: 0.3s;
+  cursor: pointer;
+  clip-path: polygon(0% 0%, 98% 0%, 100% 50%, 98% 100%, 0% 100%);
+}
+
+.table th {
+  padding: $default-padding;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  color: var(--secondary);
+}
+
+table tr.selected {
+  background-color: var(--selection-bgcolor) !important;
+  color: var(--selection-color) !important;
+}
+
+.table .checked-column {
+  width: 30px;
+  min-width: 30px;
+}
+
+
+// table scrollable
+.table-scroll {
+  display: block;
+  empty-cells: show;
+}
+
+.table-scroll thead {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.table-scroll tbody {
+  display: block;
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.table-scroll tr {
+  width: 100%;
+  display: flex;
+}
+
+.table-scroll td,
+.table-scroll th {
+  flex-basis: 100%;
+  flex-grow: 2;
+  display: block;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-scroll td:first-child,
+.table-scroll th:first-child,
+.table td:first-child,
+.table th:first-child {
+  width: 30px;
+  min-width: 30px;
+}

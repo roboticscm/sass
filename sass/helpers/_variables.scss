@@ -1,0 +1,72 @@
+//padding
+$default-padding: 5px;
+$large-padding: 10px;
+$small-padding: 1px;
+
+//font size
+$small-font-size: 0.8rem;
+$default-font-size: 1rem;
+$large-icon-size: 1.1rem;
+$large-icon-size-plus: 1.7rem;
+$very-large-icon-size: 2.4rem;
+
+//z-index
+$highest-z-index: 999;
+$modal-wrapper-z-index: 9998;
+$modal-z-index: 9999;
+
+//avatar
+$avatar_width: 46px;
+$avatar_height: 46px;
+$header_height: 50px;
+$footer_height: 40px;
+$footer_margin_bottom: 45px;
+$view-title-height: 30px;
+
+// border
+$default-border: 1px solid gray;
+$default-border-radius: 4px;
+$small-default-border-radius: 2px;
+
+// button
+$button-padding: 6px 10px;
+$small-button-padding: 2px 5px;
+
+// Responseive
+// number of columns variable
+$cols: 24;
+// breakpoints map
+$breakpoints: (
+  xs: 568px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px,
+  xl: 1366px,
+  xx: 1440px
+);
+
+$inv-breakpoints: (
+  xx: 1440px,
+  xl: 1366px,
+  lg: 1200px,
+  md: 1024px,
+  sm: 768px,
+  xs: 568px
+);
+
+$breakpoints-inv: (
+  xx: 1440px,
+  xl: 1366px,
+  lg: 1200px,
+  md: 1024px,
+  sm: 768px,
+  xs: 568px
+);
+
+// spliter
+$default-box-shadow: 2px 2px #888888;
+$horizontal-gutter-width: 10px;
+
+// dot dimensions
+$dot-size: 2px;
+$dot-space: 5px;

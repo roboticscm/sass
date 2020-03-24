@@ -1,0 +1,71 @@
+.form-control {
+  padding: $default-padding;
+  font-size: 1rem;
+  border: $default-border;
+  background: var(--form-control-bgcolor);
+  width: 100%;
+  overflow: hidden;
+}
+.label {
+  padding-top: $default-padding;
+  padding-bottom: $default-padding;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--base-color);
+}
+
+.form-control-search {
+  padding: $default-padding;
+  font-size: 1rem;
+  border: $default-border;
+  background: var(--form-control-bgcolor);
+  width: calc(100% - 40px - #{$small-padding}* 3);
+  margin-left: $small-padding;
+  margin-right: $small-padding;
+}
+.form-control-search-button {
+  width: 40px;
+  padding: $default-padding;
+  background: var(--bg-primary);
+  color: var(--primary);
+  font-size: 1rem;
+  border: $default-border;
+  border-left: none;
+  cursor: pointer;
+}
+
+.form-control-dropdown {
+  appearance: none;
+  font-size: 1rem;
+  border: $default-border;
+  max-height: 2.2rem;
+  height: 2.2rem;
+  width: 100%;
+}
+
+.control-dropdown {
+  appearance: none;
+  font-size: 1rem;
+  border: $default-border;
+  max-height: 2.2rem;
+  height: 2.2rem;
+}
+
+.small-control-dropdown {
+  appearance: none;
+  font-size: 0.8rem;
+  border: $default-border;
+  max-height: 1.3rem;
+  height: 1.3rem;
+}
+
+// @Deprecated
+.full-width {
+  width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
