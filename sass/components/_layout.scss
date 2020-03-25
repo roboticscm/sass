@@ -6,12 +6,16 @@
 }
 
 .layout-header-wrapper {
+  //min-height: 0;
+  //overflow: hidden;
+  //background-color: var(--bg-primary);
+  //color: var(--primary);
+}
+.layout-header {
   min-height: 0;
   overflow: hidden;
   background-color: var(--bg-primary);
   color: var(--primary);
-}
-.layout-header {
   display: flex;
   justify-content: space-between;
   height: 100%;
