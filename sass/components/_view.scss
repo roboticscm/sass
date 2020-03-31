@@ -79,6 +79,7 @@
   line-height: $footer-height;
   text-align: right;
   border: $default-border;
+
 }
 
 .left-grid-vertical-gutter {
@@ -138,6 +139,12 @@
   .view-right-main {
     height: auto;
     overflow: visible;
+  }
+
+  .view-content-bottom,
+  .view-left-bottom,
+  .view-right-bottom {
+   margin: 0 $default-padding;
   }
 
   .view-container,

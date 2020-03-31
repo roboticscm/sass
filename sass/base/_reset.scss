@@ -14,3 +14,7 @@ input[type='text'] {
     border: 1px solid var(--focus-outline-color);
   }
 }
+
+input[type="text"]:disabled {
+  color: var(--readonly-text-color)
+}
