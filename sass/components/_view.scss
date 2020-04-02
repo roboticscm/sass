@@ -13,14 +13,14 @@
   height: calc(100% - #{$view-title-height});
   width: 100%;
   display: grid;
-  grid-template-columns: 250px $horizontal-gutter-width auto;
+  grid-template-columns: 260px $horizontal-gutter-width auto;
 }
 
 .view-container-2-col-modal {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 250px $horizontal-gutter-width auto;
+  grid-template-columns: 260px $horizontal-gutter-width auto;
 }
 
 .view-container {

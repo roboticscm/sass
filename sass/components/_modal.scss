@@ -19,7 +19,8 @@
   border: $default-border;
   resize: both;
   overflow: auto;
-  box-shadow: $default-box-shadow;
+  //box-shadow: $default-box-shadow;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
