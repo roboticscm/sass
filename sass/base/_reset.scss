@@ -8,12 +8,12 @@ body {
   font-size: 13px;
 }
 
-input[type='text'] {
-  outline: none;
-  &:focus {
-    border: 1px solid var(--focus-outline-color);
-  }
-}
+//input[type='text'] {
+//  outline: none;
+//  &:focus {
+//    //border: 1px solid var(--focus-outline-color);
+//  }
+//}
 
 input[type="text"]:disabled {
   color: var(--readonly-text-color)

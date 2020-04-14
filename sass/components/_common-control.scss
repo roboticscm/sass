@@ -16,6 +16,35 @@
   color: var(--base-color);
 }
 
+
+//quick search
+.quick-search-wrapper {
+  width: 100%;
+  display: flex;
+  font-size: 0.8rem;
+  input {
+    border-radius: $default-border-radius;
+    padding: $default-padding;
+    background: var(--form-control-bgcolor);
+    color: var(--base-color);
+    &:focus {
+      //border: 2px solid var(--focus-outline-color);
+    }
+    ::placeholder {
+      color: var(--primary);
+    }
+  }
+  i {
+    margin-left: -30px;
+    padding-top: $default-padding;
+    cursor: pointer;
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+}
+
+// @Deprecated
 .form-control-search {
   padding: $default-padding;
   font-size: 1rem;
@@ -25,6 +54,7 @@
   margin-left: $small-padding;
   margin-right: $small-padding;
 }
+// @Deprecated
 .form-control-search-button {
   width: 40px;
   padding: $default-padding;
@@ -70,6 +100,16 @@
   width: 100%;
 }
 
+.progress-bar-wrapper {
+  //position: fixed;
+  //z-index: $modal-wrapper-z-index;
+  //left: 0;
+  //top: 0;
+  //width: 100%;
+  //height: 100%;
+
+  //background: rgba(0, 0, 0, 0.1);
+}
 
 .progress-bar {
   position: absolute;
@@ -84,4 +124,6 @@
 
 .small-progress-bar {
   font-size: 1rem;
+  top: 30%;
+  left: 90%;
 }

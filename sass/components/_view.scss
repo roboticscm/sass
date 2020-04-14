@@ -9,6 +9,13 @@
   grid-template-columns: 250px $horizontal-gutter-width auto $horizontal-gutter-width 150px;
 }
 
+.view-container-3-col-modal {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 250px $horizontal-gutter-width auto $horizontal-gutter-width 150px;
+}
+
 .view-container-2-col {
   height: calc(100% - #{$view-title-height});
   width: 100%;
@@ -42,7 +49,7 @@
   & i {
     font-size: 1rem;
   }
-  & .image {
+  & img {
     width: 1rem;
     height: auto;
   }
@@ -120,7 +127,7 @@
   background-size: $dot-space $dot-space;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .view-left {
     grid-column: 1 / span 5;
     overflow: visible;

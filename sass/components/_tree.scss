@@ -314,3 +314,14 @@ ul.ztree.zTreeDragUL {
 	padding:0;
 	background:none;
 }*/
+
+.stree {
+  height: 100%;
+  overflow: auto;
+}
+.tree-wrapper {
+  padding:  $default-padding;
+}
+.no-data {
+  text-align: center;
+}
