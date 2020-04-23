@@ -46,7 +46,7 @@
   grid-template-columns: repeat(24, 1fr);
   padding-top: $small-padding;
   padding-bottom: $small-padding;
-  grid-column-gap: 4px;
+  grid-column-gap: 10px;
 }
 
 @for $i from 1 through $cols {

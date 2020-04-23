@@ -10,6 +10,7 @@
   top: 0;
   resize: horizontal;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .table .freeze {
@@ -36,6 +37,10 @@
 .table th {
   border: 1px solid #ddd;
   padding: $default-padding;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 0;
 }
 
 .table tr {
@@ -65,7 +70,7 @@
   color: var(--tertiary);
 }
 
-table tr.selected {
+.table tr.selected {
   background-color: var(--selection-bgcolor) !important;
   color: var(--selection-color) !important;
 }

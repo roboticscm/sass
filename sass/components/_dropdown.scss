@@ -51,6 +51,35 @@
   }
 }
 
+.filter-dropdown-content {
+  background: var(--base-background);
+  display: none;
+  position: absolute;
+  top: 15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: $highest-z-index;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.filter-dropdown-item {
+  font-size: $default-font-size;
+  padding: 5px 5px;
+  display: block;
+  text-align: left;
+  margin-top: $small-padding;
+  white-space: nowrap;
+  &:hover {
+    background-color: var(--hover-bgcolor);
+  }
+}
+
 .show-dropdown {
   display: block;
+}
+
+.filter-active-item {
+  //background-color: var(--selection-bgcolor);
+  //color: var(--selection-color);
+  font-weight: 900;
 }

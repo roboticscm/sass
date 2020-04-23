@@ -49,11 +49,11 @@
 
   --focus-outline-color: #0fdb2a;
   --hover-color: var(--bg-danger);
-
+  --hover-bgcolor: #e0efff;
   --horizontal-gutter-width: 20px;
   ::placeholder {
     color: var(--base-color);
-    opacity: 0.3;
+    opacity: 0.7;
   }
 }
 
