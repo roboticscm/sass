@@ -5301,7 +5301,7 @@ ul.ztree.zTreeDragUL {
   overflow: auto;
   padding: 5px; }
 
-.view-content-bottom,
+.view-content-controller,
 .view-left-bottom,
 .view-right-bottom {
   height: 40px;

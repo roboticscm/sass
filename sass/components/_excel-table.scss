@@ -79,8 +79,8 @@
   border-left: 1px solid #ccc;
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  background-color: var(--bg-secondary);
-  color: var(--secondary);
+  background-color: var(--bg-primary);
+  color: var(--primary);
   padding: $default-padding;
   cursor: pointer;
   box-sizing: border-box;
@@ -89,6 +89,22 @@
   position: sticky;
   top: 0;
   z-index: 20;
+  font-weight: 500;
+  text-overflow: ellipsis;
+}
+
+.jexcel > tbody > tr:hover  {
+  background: var(--selection-bgcolor);
+  font-weight: 500;
+}
+
+.jexcel > tbody > tr:hover td:first-child {
+  background: var(--selection-bgcolor);
+  font-weight: 500;
+}
+
+.jexcel > tbody > tr > td:hover  {
+  border: $thin-active-border;
 }
 
 .with-toolbar .jexcel > thead > tr > td {
@@ -200,8 +216,14 @@
   color: var(--readonly-text-color);
 }
 .jexcel > tbody > tr.selected > td:first-child {
-  background-color: #dcdcdc;
+  background-color: var(--selection-bgcolor);
+  font-weight: 500;
 }
+.jexcel > tbody > tr.selected  {
+  background-color: var(--selection-bgcolor);
+  font-weight: 500;
+}
+
 .jexcel > tbody > tr > td > select,
 .jexcel > tbody > tr > td > input,
 .jexcel > tbody > tr > td > textarea {
@@ -342,7 +364,7 @@
 
 .jexcel .editor > input {
   padding-left: 4px;
-  color: var(--base-background)
+  //color: var(--base-background);
 }
 
 .jexcel .editor .jupload {

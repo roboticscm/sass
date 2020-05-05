@@ -1,0 +1,31 @@
+.section {
+  padding: $default-padding;
+  margin-top: $default-padding;
+  &.border {
+    border: $default-border;
+  }
+
+  &.border-radius {
+    border-radius: $default-border-radius;
+  }
+
+  &__title {
+    background: var(--bg-tertiary);
+    padding: $default-padding;
+    font-weight: 500;
+    &.link {
+      &:hover {
+        font-weight: 700;
+        color: var(--my-active-color);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__body {
+    background: var(--bg-primary);
+    &.hide {
+      display: none;
+    }
+  }
+}

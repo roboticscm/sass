@@ -1,20 +1,23 @@
 @mixin create-dropdown-content {
   display: none;
   position: fixed;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   min-width: 180px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: $default-box-shadow;
   z-index: $highest-z-index;
   max-height: 80vh;
   overflow: auto;
+  font-family: $default-font-family;
   &__selected {
-    background-color: var(--bg-tertiary);
-    color: var (--tertiary) !important;
+    background-color: var(--selection-bgcolor);
+    color: var(--selection-color) !important;
+    font-weight: 500 !important;
   }
 }
 
 .right-dropdown-content {
   @include create-dropdown-content();
+  //transform: translateY($large-padding);
   right: 0;
 }
 
@@ -25,20 +28,21 @@
 
 .dropdown-content {
   @include create-dropdown-content();
-  transform: translateX(-$large-padding);
+  //transform: translateX(-$large-padding);
+  //transform: translateY($large-padding);
 }
 
 .dropdown-item {
   color: var(--primary);
   font-size: $default-font-size;
+  font-weight: 300;
   padding: 12px 16px;
   display: block;
   text-align: left;
   margin-top: $small-padding;
   white-space: nowrap;
   &:hover {
-    background-color: var(--bg-tertiary);
-    color: var(--tertiary);
+    @include create_thin-hover_item();
   }
 
   i {
@@ -55,7 +59,7 @@
   background: var(--base-background);
   display: none;
   position: absolute;
-  top: 15px;
+  top: 13px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: $highest-z-index;
   max-height: 80vh;
@@ -82,4 +86,8 @@
   //background-color: var(--selection-bgcolor);
   //color: var(--selection-color);
   font-weight: 900;
+}
+
+.dropdown-mark-icon {
+  width: 20px;
 }

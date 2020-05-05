@@ -1,0 +1,64 @@
+.closeable-list {
+  position: relative;
+  border: $default-border;
+  border-radius: $default-border-radius;
+  display: flex;
+  //justify-content: center;
+  padding: $default-padding;
+  margin-top: $default-padding;
+  min-height: 40px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    margin-left: 1px;
+    margin-right: 1px;
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px 15px 2px 12px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: relative;
+    max-width: 250px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    div {
+      max-width: 250px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  ul li:hover {
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  ul li:hover .close {
+    font-weight: 300;
+  }
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: -3px;
+    padding: 2px 4px;
+    transform: translate(0%, -50%);
+    border-radius: 10px;
+  }
+
+  .close:hover {
+    background: #bbb;
+    cursor: pointer;
+  }
+}

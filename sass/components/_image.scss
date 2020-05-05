@@ -26,6 +26,13 @@
   }
 }
 
+.no-background {
+  .image {
+    background: none;
+  }
+
+}
+
 .image-hover:hover .overlap {
   display: flex;
 }

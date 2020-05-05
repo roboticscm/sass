@@ -43,6 +43,25 @@
   max-width: 0;
 }
 
+
+.table tbody tr td:hover {
+  border: $thin-active-border;
+  background: var(--selection-cell-bgcolor);
+  font-weight: 500;
+}
+
+.table tbody tr:hover {
+  background-color: var(--selection-bgcolor) !important;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.table tbody tr:hover th {
+  background-color: var(--selection-bgcolor) !important;
+  cursor: pointer;
+  font-weight: 500;
+}
+
 .table tr {
   color: var(--base-color);
 }
@@ -51,28 +70,27 @@
   background-color: var(--table-row-bgcolor);
 }
 
-.table tbody tr:hover {
-  background-color: var(--selection-bgcolor) !important;
-  cursor: pointer;
-}
-
 .table thead th {
   padding: $default-padding;
   text-align: center;
-  background-color: var(--bg-secondary);
-  color: var(--secondary);
+  //background-color: var(--bg-secondary);
+  //color: var(--secondary);
+  background-color: var(--bg-primary);
+  color: var(--primary);
 }
 
-.table tbody th {
+.table tbody tr:not(.selected) th {
   padding: $default-padding;
   text-align: center;
   background-color: var(--bg-tertiary);
-  color: var(--tertiary);
 }
 
-.table tr.selected {
+
+
+.table tbody tr.selected {
   background-color: var(--selection-bgcolor) !important;
   color: var(--selection-color) !important;
+  font-weight: 500;
 }
 
 .table .checked-column {

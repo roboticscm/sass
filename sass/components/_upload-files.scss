@@ -1,0 +1,39 @@
+.upload-files {
+  border: 2px dashed #ccc;
+  border-radius: $default-border-radius;
+  padding-bottom: $default-padding;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  .closeable-list {
+    border: none;
+    min-height: 0;
+  }
+
+  &.dragover {
+    border-color: #000;
+  }
+  &__info {
+    padding-top: $default-padding;
+    display: flex;
+    flex-direction: column;
+    &__icon {
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+    &__label {
+      display: flex;
+      justify-content: center;
+      white-space: nowrap;
+      &__select {
+        font-weight: 400;
+        &:hover {
+          font-weight: 700;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

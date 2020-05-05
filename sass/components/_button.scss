@@ -1,3 +1,7 @@
+.btn-flat {
+  @include create-flat-button();
+}
+
 .btn-primary {
   @include create-button('bg-primary', 'primary');
 }

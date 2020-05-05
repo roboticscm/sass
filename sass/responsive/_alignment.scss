@@ -1,5 +1,5 @@
 // loop over the breakpoints
-@each $key, $value in $inv-breakpoints {
+@each $key, $value in $breakpoints-inv {
   .text-#{$key}-right {
     text-align: right;
   }
@@ -9,7 +9,7 @@
   }
 }
 
-@each $key, $value in $inv-breakpoints {
+@each $key, $value in $breakpoints-inv {
   .text-#{$key}-right {
     @include break($key) {
       text-align: right;

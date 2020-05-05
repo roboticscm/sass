@@ -3,10 +3,11 @@
   height: 100%;
 }
 .view-container-3-col {
-  height: calc(100% - #{$view-title-height});
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 250px $horizontal-gutter-width auto $horizontal-gutter-width 150px;
+  background: var(--bg-tertiary);
 }
 
 .view-container-3-col-modal {
@@ -14,13 +15,17 @@
   width: 100%;
   display: grid;
   grid-template-columns: 250px $horizontal-gutter-width auto $horizontal-gutter-width 150px;
+  background: var(--bg-tertiary);
 }
 
 .view-container-2-col {
-  height: calc(100% - #{$view-title-height});
+  height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: 260px $horizontal-gutter-width auto;
+  background: var(--bg-tertiary);
+  padding-left: $default-padding;
+  padding-right: $default-padding;
 }
 
 .view-container-2-col-modal {
@@ -28,11 +33,14 @@
   width: 100%;
   display: grid;
   grid-template-columns: 260px $horizontal-gutter-width auto;
+  background: var(--bg-tertiary);
 }
 
 .view-container {
-  height: calc(100% - #{$view-title-height});
+  height: 100%;
   width: 100%;
+  padding-left: $default-padding;
+  padding-right: $default-padding;
 }
 
 .view-title {
@@ -58,6 +66,8 @@
 .view-left {
   height: 100%;
   overflow: auto;
+  border-radius: $default-border-radius;
+  border: $default-border;
 }
 
 .view-content {
@@ -68,25 +78,41 @@
 .view-right {
   height: 100%;
   overflow: auto;
+  border-radius: $default-border-radius;
 }
 
 .view-content-main,
 .view-left-main,
 .view-right-main {
-  height: calc(100% - #{$footer-height});
-  overflow: auto;
+  overflow-y: auto;
   padding: $default-padding;
+  background: var(--bg-primary);
+  border-radius: $default-border-radius;
+  border: $default-border;
+  min-width: 0;
 }
 
-.view-content-bottom,
-.view-left-bottom,
-.view-right-bottom {
-  height: $footer-height;
-  background-color: var(--bg-secondary);
-  line-height: $footer-height;
-  text-align: right;
-  border: $default-border;
+.view-content-main {
+  height: calc(100% - #{$controller-height} - 9px);
+}
 
+.view-left-main,
+.view-right-main {
+  height: calc(100%);
+}
+
+.view-content-controller,
+.view-left-controller,
+.view-right-controller {
+  padding-bottom: $default-padding;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $default-padding;
+  min-height: $controller-height;
+  border: $controller-height;
+  border-radius: $default-border-radius;
+  background: var(--bg-primary);
+  border: $default-border;
 }
 
 .left-grid-vertical-gutter {
@@ -148,10 +174,10 @@
     overflow: visible;
   }
 
-  .view-content-bottom,
+  .view-content-controller,
   .view-left-bottom,
   .view-right-bottom {
-   margin: 0 $default-padding;
+   margin-top: $default-padding;
   }
 
   .view-container,

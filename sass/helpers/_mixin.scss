@@ -5,6 +5,29 @@
   }
 }
 
+@mixin create-flat-button() {
+  padding: $button-padding;
+  color: var(--primary);
+  background-color: var(--bg-primary);
+  border-radius: $default-border-radius;
+  cursor: pointer;
+  font-family: $default-font-family;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: $default-padding;
+  margin-left: $default-padding;
+  min-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid transparent;
+  font-weight: 500;
+  &:hover {
+    border: $default-border;
+    background-color: var(--bg-tertiary);
+  }
+}
+
 @mixin create-button($bg-color, $color) {
   padding: $button-padding;
   color: var(--#{$color});
@@ -13,8 +36,8 @@
   cursor: pointer;
   font-weight: 400;
   font-size: 1rem;
-  margin-left: $small-padding;
-  margin-right: $small-padding;
+  margin-left: $default-padding;
+  //margin-right: $small-padding;
 }
 
 @mixin create-small-button($bg-color, $color) {
@@ -26,5 +49,26 @@
   font-weight: 400;
   font-size: 0.8rem;
   margin-left: $small-padding;
-  margin-right: $small-padding;
+  //margin-right: $small-padding;
+}
+
+@mixin create-active-item () {
+  cursor: pointer;
+  border-bottom: $active-border;
+  //background: var(--bg-tertiary);
+  color: var(--my-active-color) !important;
+}
+
+@mixin create-hover-item () {
+  cursor: pointer;
+  border-bottom: $active-border;
+  outline: $default-border;
+  color: var(--my-active-color) !important;
+}
+
+@mixin create-thin-hover-item () {
+  cursor: pointer;
+  border-bottom: $thin-active-border;
+  outline: $default-border;
+  color: var(--my-active-color) !important;
 }

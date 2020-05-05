@@ -52,6 +52,8 @@
 @for $i from 1 through $cols {
   .col-#{$i} {
     grid-column-start: span $i;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -60,6 +62,8 @@
   @for $i from 0 to $cols {
     .col-#{$key}-#{$cols - $i} {
       grid-column-start: span ($cols - $i);
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }
@@ -69,6 +73,8 @@
     .col-#{$key}-#{$cols - $i} {
       @include break($key) {
         grid-column-start: span ($cols - $i);
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }
