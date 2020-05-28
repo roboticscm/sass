@@ -9,7 +9,7 @@
 @import 'responsive/padding';
 @import 'responsive/margin';
 @import 'responsive/alignment';
-@import 'components/layout';
+@import 'components/header';
 @import 'components/border';
 @import 'components/tooltip';
 @import 'components/dropdown';
@@ -35,3 +35,7 @@
 @import 'components/closeable-list';
 @import 'components/upload-files';
 @import 'components/section';
+@import 'components/font';
+@import 'components/datetime-picker';
+@import 'components/login';
+@import 'components/tabs';

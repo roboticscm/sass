@@ -39,7 +39,7 @@ website:	http://code.google.com/p/jquerytree/
   margin: 0;
   cursor: pointer;
   height: 17px;
-  color: var(--base-color);
+  color: var(--primary);
   background-color: transparent;
   text-decoration: none;
   vertical-align: top;
@@ -51,7 +51,7 @@ website:	http://code.google.com/p/jquerytree/
 }
 .ztree li a.curSelectedNode {
   padding-top: 0px;
-  background-color: var(--selection-bgcolor);
+  background-color: var(--selection-row-bgcolor);
   color: var(--selection-color);
   height: 16px;
   //border: $default-border;
@@ -60,7 +60,7 @@ website:	http://code.google.com/p/jquerytree/
 }
 .ztree li a.curSelectedNode_Edit {
   padding-top: 0px;
-  background-color: var(--selection-bgcolor);
+  background-color: var(--selection-row-bgcolor);
   color: var(--selection-color);
   height: 16px;
   border: $default-border;
@@ -265,7 +265,7 @@ website:	http://code.google.com/p/jquerytree/
 }
 
 ul.tmpTargetzTree {
-  background-color: var(--selection-bgcolor);
+  background-color: var(--selection-row-bgcolor);
   opacity: 0.8;
   filter: alpha(opacity=80);
 }

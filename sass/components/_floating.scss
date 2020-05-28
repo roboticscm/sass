@@ -4,7 +4,7 @@
   position: relative;
   input[type="checkbox"] {
     position: absolute;
-    top: 12px;
+    top: 14px;
     cursor: pointer;
 
     &.right {
@@ -15,29 +15,39 @@
   & .floating__input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    background: var(--base-background);
+    border-bottom: 1px solid var(--separate-color);
+    background: transparent;
     appearance: none;
     outline: none;
     font-size: 1rem;
     font-family: $default-font-family;
-    font-weight: 300;
+    font-weight: 400;
+    color: var(--primary);
     &:focus {
       border-bottom: $thin-active-border;
-
+      padding: 15px 2px 2px 20px ;
+      color: var(--my-active-color);
+      &.check {
+        padding: 15px 2px 2px 20px;
+        &.right {
+          padding: 15px 20px 2px 20px;
+        }
+      }
       &::placeholder {
         color: transparent;
       }
+
+
     }
 
-    padding: 15px 2px 2px 2px;
-
+    padding: 15px 2px 2px 20px;
     &.check {
       padding: 15px 2px 2px 20px;
       &.right {
-        padding: 15px 2px 2px 2px;
+        padding: 15px 20px 2px 20px;
       }
     }
+
   }
 
   & .dropdown-icon {
@@ -52,20 +62,23 @@
 
   select {
     padding: 0px 0px 2px 2px;
-    margin-top: 17px;
+    margin-top: 15px;
     width: 100%;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    background: var(--base-background);
+    //border-bottom: 1px solid var(--separate-color);
+    border-bottom: 1px solid transparent;
+    background: transparent;
+    color: var(--primary);
     -webkit-appearance: none;
     -webkit-border-radius: 0px;
     border-radius: 0;
     outline: none;
     font-size: 1rem;
     font-family: $default-font-family;
-    font-weight: 300;
+    font-weight: 400;
     &:focus {
       border-bottom: $thin-active-border;
+
     }
     &.check {
       padding: 0px 0px 2px 20px;
@@ -78,7 +91,7 @@
   label {
     display: block;
     max-height: 0;
-    color: rgba(0, 0, 0, 0.4);
+    color: var(--readonly-text-color);
     &::before {
       content: attr(data-content);
       display: inline-block;
@@ -88,31 +101,49 @@
   }
 }
 
+.floating__input:placeholder-shown {
+  padding: 15px 20px 2px 5px !important;
+  &.check {
+    padding: 15px 2px 2px 20px !important;
+    &.right {
+      padding: 15px 20px 2px 5px !important;
+    }
+  }
+
+}
+
 .floating__input:placeholder-shown + .floating__label::before {
   transform: translate3d(0, -2.0rem, 0) scale3d(1, 0, 1);
 }
 
 .floating__label::before,
 .floating__input:focus + .floating__label::before {
-  transform: translate3d(0, -3.1rem, 0) scale3d(1, 1, 1);
+  //font-size: 0.8rem;
+  transform: translate3d(0, -2.8rem, 0) scale3d(1, 1, 1);
 }
 
+.floating__input:not(:placeholder-shown)  {
+  border-bottom: 1px solid transparent;
+}
 
 .floating-filter-wrapper {
   margin-top: 20px;
   width: 100%;
   position: relative;
+  background: transparent;
 
   & .floating-filter__input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    background: var(--base-background);
+    //border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--separate-color);
+    color: var(--primary);
     appearance: none;
     outline: none;
-
+    background: transparent;
     &:focus {
-      border-bottom: 2px solid var(--bg-primary);
+      border-bottom: $thin-active-border;
+      color: var(--my-active-color);
       &::placeholder {
         color: transparent;
       }
@@ -122,15 +153,21 @@
     }
 
     &:invalid {
-      padding: 15px 2px 2px 42%;
+      padding: 15px 2px 2px 50%;
     }
 
+  }
+
+  & .floating-filter__checkbox {
+    color: var(--primary);
+    margin-left: 50%;
+    margin-top: 11px;
   }
 
   label {
     display: block;
     max-height: 0;
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--readonly-text-color);
     &::before {
       content: attr(data-content);
       display: inline-block;
@@ -141,6 +178,14 @@
 
   select:focus {
     width: 100%;
+  }
+
+  .search-progress {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -157,7 +202,7 @@
 .floating-filter__select {
   display: flex;
   position: absolute;
-  width: 40%;
+  width: 48%;
   top: 12px;
   cursor: pointer;
 }
@@ -166,15 +211,8 @@
   display: flex;
 }
 
-.floating-filter__select,
+//.floating-filter__select,
 .floating-filter__input:valid ~ .floating-filter__select {
   display: none;
 }
 
-.filter-date-picker {
-  .textbox {
-    border: none;
-    border-radius: 0;
-    border-bottom: 1px solid gray;
-  }
-}

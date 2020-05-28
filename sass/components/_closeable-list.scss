@@ -1,64 +1,114 @@
 .closeable-list {
   position: relative;
-  border: $default-border;
+  width: 100%;
+  //background: var(--bg-primary);
+  background: transparent;
   border-radius: $default-border-radius;
-  display: flex;
-  //justify-content: center;
-  padding: $default-padding;
-  margin-top: $default-padding;
-  min-height: 40px;
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  ul li {
-    margin-left: 1px;
-    margin-right: 1px;
-    border: 1px solid #ddd;
-    margin-top: -1px; /* Prevent double borders */
-    background-color: #f6f6f6;
-    padding: 12px 15px 2px 12px;
-    text-decoration: none;
-    color: black;
-    display: block;
-    position: relative;
-    max-width: 250px;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    div {
-      max-width: 250px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-  }
-
-  ul li:hover {
-    font-weight: 500;
-    cursor: pointer;
-  }
-
-  ul li:hover .close {
-    font-weight: 300;
-  }
-  .close {
+  .close-all {
     cursor: pointer;
     position: absolute;
     top: 8px;
-    right: -3px;
+    right: 0px;
     padding: 2px 4px;
     transform: translate(0%, -50%);
     border-radius: 10px;
+    font-size: 1.5rem;
+  }
+  &__content {
+    padding: 25px $default-padding $default-padding $default-padding;
+    border: $default-border;
+    border-radius: $default-border-radius;
+    display: flex;
+    min-height: 67px;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      align-content: flex-end;
+    }
+
+    ul li {
+      border-radius: $default-border-radius;
+      border: $default-border;
+      margin: 1px $default-padding;
+      background-color: var(--bg-form);
+      padding: 12px 15px 2px 6px;
+      //text-decoration: none;
+      color: var(--primary);
+      display: block;
+      position: relative;
+      max-width: 320px;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      //height: 35px;
+      div {
+        max-width: 320px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      a {
+        color: var(--link-color);
+      }
+    }
+
+    .close {
+      cursor: pointer;
+      position: absolute;
+      top: 8px;
+      right: 0px;
+      padding: 2px 4px;
+      transform: translate(0%, -50%);
+      border-radius: 10px;
+    }
   }
 
-  .close:hover {
-    background: #bbb;
-    cursor: pointer;
+  &__controller {
+    position: absolute;
+    left: 5px;
+    top: 4px;
+  }
+}
+
+
+.closeable-list__hover {
+  .closeable-list__content {
+    ul li:hover {
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    ul li:hover .close {
+      font-weight: 500;
+    }
+
+    .close:hover {
+      background: #bbb;
+      cursor: pointer;
+    }
+  }
+
+  .closeable-list__controller {
+    &:hover {
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+
+.closeable-list__floating-controller {
+  .closeable-list__content {
+    padding-top: $default-padding;
+  }
+}
+
+.closeable-list-auto-height {
+  .closeable-list__content {
+    min-height: 0;
   }
 }

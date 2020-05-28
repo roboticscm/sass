@@ -41,13 +41,13 @@
     justify-content: space-between;
     &__left {
       height: 100%;
-      width: 10%;
       display: flex;
       min-width: 270px;
     }
     &__center {
-      width: 90%;
       display: flex;
+      width: 50%;
+      justify-content: space-evenly;
       &__body {
         width: 96%;
         display: flex;
@@ -67,7 +67,7 @@
     &__right {
       min-width: 90px;
       display: flex;
-      padding-right: 35px;
+      //padding-right: 35px;
     }
   }
 
@@ -85,6 +85,7 @@
 
   &__bottom {
     height: var(--header-bottom-height);
+    padding-top: 10px;
   }
 }
 
@@ -92,8 +93,8 @@ $org-icon-mark-width: 16px;
 $org-icon-mark-height: 16px;
 $dep-icon-mark-width: 14px;
 $dep-icon-mark-height: 14px;
-$skyhub-logo-width: 350px;
-$skyhub-logo-height: 350px;
+$skyhub-logo-width: 250px;
+$skyhub-logo-height: 150px;
 
 $skyhub-small-logo-width: auto;
 $skyhub-small-logo-height: 80px;
@@ -168,7 +169,8 @@ $skyhub-small-logo-height: 80px;
       align-content: center;
       justify-content: center;
       white-space: nowrap;
-      font-size: 1.2rem;
+      font-family: $default-font-family;
+      font-size: 1.3rem;
       font-weight: 500;
     }
 
@@ -177,10 +179,6 @@ $skyhub-small-logo-height: 80px;
       padding-right: 10px;
       &:hover {
         color: var(--my-active-color);
-        .dropdown-content {
-          //transform: translateY($large-padding);
-          display: block;
-        }
       }
       .dep-icon-mark {
         width: $dep-icon-mark-width;
@@ -193,7 +191,7 @@ $skyhub-small-logo-height: 80px;
 
 //search bar
 .search-bar-wrapper {
-  max-width: 500px;
+  max-width: 400px;
   width: 95%;
   display: flex;
   flex-direction: column;
@@ -252,12 +250,104 @@ $skyhub-small-logo-height: 80px;
   padding: $default-padding;
   display: flex;
   align-items: center;
-  &__chat, &__functional {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: $large-padding;
-    font-size: 1.5rem;
+
+  .notify-icon {
+    width: $notify-icon-width;
+    height: $notify-icon-height;
+    margin-right: $badge-space;
+    &__color {
+      fill: var(--notify-icon-color);
+    }
+
+    &:hover .notify-icon__color{
+      fill: var(--notify-icon-color);
+      cursor: pointer;
+    }
+  }
+
+  .notify-icon-disabled {
+    .notify-icon__color {
+      fill: var(--disabled-text-color);
+    }
+  }
+
+  .badge {
+    padding-left: 4px;
+    padding-right: 4px;
+    background: var(--bg-secondary);
+    color: var(--secondary);
+    width: auto;
+    min-width: $badge-width;
+    height: $badge-height;
+    border-radius: 40%;
+    line-height: $badge-height;
+    text-align: center;
+    position: absolute;
+    top: 3px;
+    z-index: 1;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .badge-chat {
+    left: calc(#{$notify-icon-width} - 7px);
+  }
+
+  .badge-functional {
+    left: calc(#{$badge-space} + (2 * #{$notify-icon-width}) - 10px);
+  }
+
+  .badge-alert {
+    left: calc(#{$badge-space} + (3 * #{$notify-icon-width}));
+  }
+
+  .notify-dropdown-item {
+    &:hover {
+      //@include create-hover-item_without-border();
+      border: $thin-active-border;
+    }
+
+    &__header {
+      &__from {
+        &__human {
+          font-weight: 500;
+        }
+      }
+
+      &__date {
+        font-style: italic;
+      }
+    }
+
+    &__content {
+      margin-top: $default-padding;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+  }
+
+  .notify-dropdown-item-old {
+    .notify-dropdown-item__header {
+      color: var(--disabled-text-color);
+    }
+
+    .notify-dropdown-item__content {
+      color: var(--disabled-text-color);
+    }
+  }
+
+  .notify-dropdown-item-cancel {
+    .notify-dropdown-item__header__from {
+      text-decoration: line-through;
+    }
+
+    .notify-dropdown-item__content {
+      //text-decoration: line-through;
+    }
   }
 }
 
@@ -300,11 +390,7 @@ $skyhub-small-logo-height: 80px;
 
   &__fullname {
     padding: $default-padding;
-    background: linear-gradient(
-      to right,
-      var(--bg-primary),
-      var(--bg-secondary)
-    ) !important;
+    background: var(--bg-form) !important;
   }
 }
 
@@ -359,13 +445,14 @@ $skyhub-small-logo-height: 80px;
 
   & .nav-item {
     padding: $large-padding 25px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: flex-start;
     white-space: nowrap;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--base-color);
     font-weight: 400;
+    border-bottom: 2px solid transparent;
     &.active {
       @include create-active-item();
     }

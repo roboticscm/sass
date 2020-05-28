@@ -65,7 +65,7 @@
   empty-cells: show;
   border: 0px;
   background-color: var(--base-backgrounsd);
-  color: var(--base-color);
+  color: var(--primary);
   width: 0;
 
   border-top: 1px solid transparent;
@@ -94,12 +94,12 @@
 }
 
 .jexcel > tbody > tr:hover  {
-  background: var(--selection-bgcolor);
+  background: var(--selection-row-bgcolor);
   font-weight: 500;
 }
 
 .jexcel > tbody > tr:hover td:first-child {
-  background: var(--selection-bgcolor);
+  background: var(--selection-row-bgcolor);
   font-weight: 500;
 }
 
@@ -216,11 +216,11 @@
   color: var(--readonly-text-color);
 }
 .jexcel > tbody > tr.selected > td:first-child {
-  background-color: var(--selection-bgcolor);
+  background-color: var(--selection-row-bgcolor);
   font-weight: 500;
 }
 .jexcel > tbody > tr.selected  {
-  background-color: var(--selection-bgcolor);
+  background-color: var(--selection-row-bgcolor);
   font-weight: 500;
 }
 
@@ -339,7 +339,7 @@
 }
 .jexcel_corner {
   position: absolute;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--primary);
   height: 1px;
   width: 1px;
   border: 1px solid rgb(255, 255, 255);
@@ -364,7 +364,9 @@
 
 .jexcel .editor > input {
   padding-left: 4px;
-  //color: var(--base-background);
+  color: var(--primary);
+  font-size: 1rem;
+  background: var(--selection-cell-bgcolor);
 }
 
 .jexcel .editor .jupload {

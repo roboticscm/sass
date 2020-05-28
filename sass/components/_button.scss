@@ -2,6 +2,24 @@
   @include create-flat-button();
 }
 
+.btn-small-round-flat {
+  @include create-flat-button();
+  border-radius: 50%;
+  padding: $small-padding;
+  min-width: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.btn-round-flat {
+  @include create-flat-button();
+  border-radius: 50%;
+  min-width: 0;
+  width: 30px;
+  height: 30px;
+  padding: $small-padding;
+}
+
 .btn-primary {
   @include create-button('bg-primary', 'primary');
 }

@@ -8,13 +8,17 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
+.high-z-index {
+  z-index: calc(#{$modal-wrapper-z-index} + 1);
+}
+
 .modal-wrapper-background {
   background: rgba(0, 0, 0, 1);
 }
 .modal {
   position: absolute;
   z-index: $modal-z-index;
-  background-color: var(--base-background);
+  background-color: var(--bg-primary);
   color: var(--base--color);
   border: $default-border;
   resize: both;
@@ -25,6 +29,7 @@
   justify-content: space-between;
   min-width: 300px;
   min-height: 140px;
+  border-radius: $default-border-radius;
 }
 
 .show-modal {
@@ -34,16 +39,21 @@
 .modal-header {
   text-align: left;
   cursor: move;
-  z-index: 10;
-  background: linear-gradient(
-    to right,
-    var(--bg-primary),
-    var(--bg-secondary)
-  );
+  //background: linear-gradient(
+  //  to right,
+  //  var(--bg-primary),
+  //  var(--bg-secondary)
+  //);
+  background: var(--modal-header-bgcolor);
   color: var(--primary);
   display: flex;
   justify-content: space-between;
   padding: $default-padding;
+  &__close{
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
 }
 .modal-content {
   padding: $default-padding;
@@ -60,5 +70,55 @@
 
 .modal-controller {
   padding: $default-padding;
-  text-align: right;
+  text-align: center;
+}
+
+// Message modal
+.message-modal {
+  position: fixed;
+  z-index: calc(#{$highest-z-index} + 2);
+  width: 300px;
+  height: 80px;
+  background: var(--notify-bgcolor);
+  box-shadow: $default-box-shadow;
+  border-radius: $default-border-radius;
+  &__title {
+    //background: linear-gradient(
+    //    to right,
+    //    var(--bg-primary),
+    //    var(--bg-secondary)
+    //);
+    background: var(--notify-bgcolor);
+    color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    padding: $default-padding;
+    cursor: pointer;
+    border-radius: $default-border-radius;
+    &__text {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &__close{
+      width: 12px;
+      height: 12px;
+      cursor: pointer;
+    }
+  }
+  &__body {
+    padding: $default-padding;
+    &__content {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+  }
+
+}
+
+.hide-message-modal {
+  display: none;
 }

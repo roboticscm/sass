@@ -1,6 +1,5 @@
 .section {
   padding: $default-padding;
-  margin-top: $default-padding;
   &.border {
     border: $default-border;
   }
@@ -10,7 +9,7 @@
   }
 
   &__title {
-    background: var(--bg-tertiary);
+    //background: var(--bg-tertiary);
     padding: $default-padding;
     font-weight: 500;
     &.link {
@@ -23,7 +22,7 @@
   }
 
   &__body {
-    background: var(--bg-primary);
+    background: var(--bg-form);
     &.hide {
       display: none;
     }

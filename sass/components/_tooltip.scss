@@ -5,7 +5,7 @@
 }
 @mixin tooltip-text {
   visibility: hidden;
-  background-color: var(--base-color);
+  background-color: var(--primary);
   color: var (--base-background);
   text-align: right;
   padding: $default-padding;

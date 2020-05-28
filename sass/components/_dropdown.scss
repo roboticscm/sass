@@ -2,15 +2,18 @@
   display: none;
   position: fixed;
   background-color: var(--bg-primary);
-  min-width: 180px;
+  //min-width: 180px;
+  //max-width: 400px;
+  width: 250px;
   box-shadow: $default-box-shadow;
   z-index: $highest-z-index;
   max-height: 80vh;
   overflow: auto;
   font-family: $default-font-family;
   &__selected {
-    background-color: var(--selection-bgcolor);
-    color: var(--selection-color) !important;
+    //@include create-hover_item();
+    border: 1px solid var(--active-border-color) !important;
+    //color: var(--my-active-color) !important;
     font-weight: 500 !important;
   }
 }
@@ -18,12 +21,12 @@
 .right-dropdown-content {
   @include create-dropdown-content();
   //transform: translateY($large-padding);
-  right: 0;
+  right: $default-padding;
 }
 
 .left-dropdown-content {
   @include create-dropdown-content();
-  left: 0;
+  left: $default-padding;
 }
 
 .dropdown-content {
@@ -35,14 +38,17 @@
 .dropdown-item {
   color: var(--primary);
   font-size: $default-font-size;
-  font-weight: 300;
+  font-weight: 400;
   padding: 12px 16px;
   display: block;
   text-align: left;
   margin-top: $small-padding;
   white-space: nowrap;
+  //border-bottom: 1px solid transparent;
+  border: 1px solid transparent;
   &:hover {
-    @include create_thin-hover_item();
+    //@include create-hover-item-without-border();
+    border: 1px solid var(--hover-border-color);
   }
 
   i {
@@ -56,25 +62,26 @@
 }
 
 .filter-dropdown-content {
-  background: var(--base-background);
+  background: var(--bg-primary);
   display: none;
   position: absolute;
   top: 13px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: $default-box-shadow;
   z-index: $highest-z-index;
   max-height: 80vh;
   overflow: auto;
 }
 
 .filter-dropdown-item {
-  font-size: $default-font-size;
-  padding: 5px 5px;
+  font-size: 1.1rem;
+  padding: 12px 5px;
   display: block;
   text-align: left;
   margin-top: $small-padding;
   white-space: nowrap;
+  border: $default-transparent-border;
   &:hover {
-    background-color: var(--hover-bgcolor);
+    border-color: var(--hover-border-color);
   }
 }
 
@@ -83,8 +90,6 @@
 }
 
 .filter-active-item {
-  //background-color: var(--selection-bgcolor);
-  //color: var(--selection-color);
   font-weight: 900;
 }
 

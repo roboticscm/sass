@@ -23,7 +23,18 @@
   width: 100%;
   display: grid;
   grid-template-columns: 260px $horizontal-gutter-width auto;
-  background: var(--bg-tertiary);
+  //background: var(--bg-tertiary);
+  padding-left: $default-padding;
+  padding-right: $default-padding;
+}
+
+
+.view-container-inside-form-2-col {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 260px $horizontal-gutter-width auto;
+  //background: var(--bg-tertiary);
   padding-left: $default-padding;
   padding-right: $default-padding;
 }
@@ -67,7 +78,7 @@
   height: 100%;
   overflow: auto;
   border-radius: $default-border-radius;
-  border: $default-border;
+  //border: $default-border;
 }
 
 .view-content {
@@ -88,26 +99,30 @@
   padding: $default-padding;
   background: var(--bg-primary);
   border-radius: $default-border-radius;
-  border: $default-border;
   min-width: 0;
 }
 
 .view-content-main {
+  background: var(--bg-form);
+  border: $default-border;
   height: calc(100% - #{$controller-height} - 9px);
 }
 
 .view-left-main,
 .view-right-main {
   height: calc(100%);
+  background: var(--bg-list);
 }
 
 .view-content-controller,
 .view-left-controller,
 .view-right-controller {
   padding-bottom: $default-padding;
+  margin-bottom: $default-padding;
+  padding-right: $default-padding;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: $default-padding;
+
   min-height: $controller-height;
   border: $controller-height;
   border-radius: $default-border-radius;
@@ -115,7 +130,7 @@
   border: $default-border;
 }
 
-.left-grid-vertical-gutter {
+.left-grid-vertical-gutter, .left-modal-grid-vertical-gutter {
   grid-area: 1 / 2;
   cursor: col-resize;
   background: linear-gradient(
@@ -130,6 +145,24 @@
       )
       center,
     var(--dot-color);
+  background-size: $dot-space $dot-space;
+}
+
+ .left-grid-vertical-gutter-inside-form {
+  grid-area: 1 / 2;
+  cursor: col-resize;
+  background: linear-gradient(
+                  90deg,
+                  var(--bg-gutter-color-inside-form) ($dot-space - $dot-size),
+                  transparent 1%
+  )
+  center,
+  linear-gradient(
+                  var(--bg-gutter-color-inside-form) ($dot-space - $dot-size),
+                  transparent 1%
+  )
+  center,
+  var(--dot-color);
   background-size: $dot-space $dot-space;
 }
 
@@ -190,4 +223,16 @@
   .right-grid-vertical-gutter {
     display: none;
   }
+}
+
+
+.nickname {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  opacity: 0.1;
+  font-size: 3.5rem;
+  pointer-events: none;
+  font-weight: 500;
+  z-index: calc(#{$highest-z-index} + 100);
 }

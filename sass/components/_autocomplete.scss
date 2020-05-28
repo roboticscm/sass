@@ -13,12 +13,13 @@
 
   .search-icon {
     position: absolute;
-    top: 0px;
+    top: 8px;
     left: 10px;
-    padding: $large-padding;
-    color: gray;
-    &:hover {
-      color: var(--my-active-color);
+    width: 16px;
+    height: 16px;
+
+    &:hover .fore-color {
+      fill: var(--my-active-color);
     }
   }
 
@@ -96,6 +97,7 @@
   padding: $small-padding;
   border: $default-border;
   background: var(--base-background);
+
 }
 .simple-show-auto-dropdown {
   display: block;
