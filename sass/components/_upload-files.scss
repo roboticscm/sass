@@ -29,6 +29,9 @@
       font-size: 2rem;
       display: flex;
       justify-content: center;
+      &:hover {
+        cursor: pointer;
+      }
     }
     &__label {
       display: flex;

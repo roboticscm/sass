@@ -19,7 +19,7 @@ body {
 /* Track */
 ::-webkit-scrollbar-track {
   //box-shadow: inset 0 0 1px var(--primary);
-  background: var(--bg-primary);
+  background: var(--bg-list);
   &:hover {
     background: var(--bg-tertiary);
   }
@@ -28,7 +28,7 @@ body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   //background: var(--readonly-text-color);
-  background: var(--bg-primary);
+  background: var(--bg-list);
   border-radius: 2px;
   &:hover {
     background: var(--readonly-text-color);

@@ -25,7 +25,7 @@
 .layout-header-wrapper {
   min-height: 0;
   overflow: hidden;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-list);
   color: var(--primary);
 }
 .layout-header {
@@ -208,6 +208,10 @@ $skyhub-small-logo-height: 80px;
       border: 1px solid var(--my-active-color);
     }
 
+    &:hover {
+      border: 1px solid var(--hover-border-color);
+    }
+
     ::placeholder {
       color: var(--primary);
     }
@@ -267,7 +271,7 @@ $skyhub-small-logo-height: 80px;
 
   .notify-icon-disabled {
     .notify-icon__color {
-      fill: var(--disabled-text-color);
+      fill: var(--empty-notify-icon-color);
     }
   }
 
@@ -304,23 +308,39 @@ $skyhub-small-logo-height: 80px;
   .notify-dropdown-item {
     &:hover {
       //@include create-hover-item_without-border();
-      border: $thin-active-border;
+      border: 1px solid var(--hover-border-color);
     }
 
     &__header {
-      &__from {
-        &__human {
-          font-weight: 500;
+      display: flex;
+      &__avatar {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        width: 35px;
+        height: 35px;
+        border: $default-border;
+        border-radius: 50%;
+        &__image {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+        &__no {
+          font-size: 1.7rem;
         }
       }
 
-      &__date {
-        font-style: italic;
+      &__text {
+        padding-left: $large-padding;
+        line-height: 16px;
       }
     }
 
     &__content {
-      margin-top: $default-padding;
+      margin-top: $large-padding;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -341,12 +361,12 @@ $skyhub-small-logo-height: 80px;
   }
 
   .notify-dropdown-item-cancel {
-    .notify-dropdown-item__header__from {
-      text-decoration: line-through;
+    .notify-dropdown-item__header {
+      //text-decoration: line-through;
     }
 
     .notify-dropdown-item__content {
-      //text-decoration: line-through;
+      text-decoration: line-through;
     }
   }
 }

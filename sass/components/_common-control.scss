@@ -33,6 +33,9 @@
     background: transparent;
     color: var(--primary);
     &:hover {
+      border: 1px solid var(--hover-border-color);
+    }
+    &:focus {
       border: 1px solid var(--my-active-color);
     }
   }
@@ -230,15 +233,17 @@
 }
 
 .task-assignee {
-  color: var(--my-active-color);
+  //color: var(--my-active-color);
+  text-decoration: underline;
+  text-decoration-color: var(--my-active-color);
 }
 
 .task-assigner {
-  color: #143A1D;
+  //color: #143A1D;
 }
 
 .task-evaluator {
-  color: #233D7B;
+  //color: #233D7B;
 }
 
 .bg-primary {
@@ -259,6 +264,12 @@
 
 .active-color {
   color: var(--my-active-color) !important;
+}
+
+.text-active-underline {
+  text-decoration: underline;
+  text-decoration-color: var(--my-active-color);
+  //text-underline-position: under;
 }
 
 .large-font-size {

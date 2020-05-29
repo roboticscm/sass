@@ -37,11 +37,11 @@
   --selection-color: #020b0a;
   --button-border-color: rgba(0, 0, 0, 0.05);
 
-  --bg-gutter-color: #D3D2D1;
-  --dot-color: var(--bg-primary);
+  --bg-gutter-color: var(--bg-tertiary);
+  --dot-color: var(--bg-tertiary);
 
-  --bg-gutter-color-inside-form: #D3D2D1;
-  --dot-color-inside-form: var(--bg-primary);
+  --bg-gutter-color-inside-form:var(--bg-tertiary);
+  --dot-color-inside-form: var(--bg-tertiary);
 
   --readonly-text-color: #858585;
   --disabled-text-color: #bfbfbf;
@@ -57,6 +57,7 @@
   --my-active-color: #ea1f40;
   --link-color: #1a6f46;
   --notify-icon-color: #58242C;
+  --empty-notify-icon-color: var(--readonly-text-color);
 
   --header-top-height: 48px;
   --header-bottom-height: 48px;
@@ -116,10 +117,10 @@
   --button-border-color: rgba(255, 255, 255, 0.05);
 
   --bg-gutter-color: var(--bg-tertiary);
-  --dot-color: var(--bg-primary);
+  --dot-color: var(--bg-tertiary);
 
   --bg-gutter-color-inside-form: var(--bg-tertiary);
-  --dot-color-inside-form: var(--bg-primary);
+  --dot-color-inside-form: var(--bg-tertiary);
 
   --readonly-text-color: #848484;
   --disabled-text-color: #636363;
@@ -134,7 +135,8 @@
   --separate-color: #454443;
   --my-active-color: #ed1a3b;
   --link-color: #1a6f46;
-  --notify-icon-color: #58242C;
+  --notify-icon-color: #b5afaf;
+  --empty-notify-icon-color: #2c2b2b;
 
   --header-top-height: 48px;
   --header-bottom-height: 48px;

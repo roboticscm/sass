@@ -26,7 +26,7 @@
     &:focus {
       border-bottom: $thin-active-border;
       padding: 15px 2px 2px 20px ;
-      color: var(--my-active-color);
+      text-decoration: none;
       &.check {
         padding: 15px 2px 2px 20px;
         &.right {
@@ -61,7 +61,7 @@
   }
 
   select {
-    padding: 0px 0px 2px 2px;
+    padding: 15px 2px 2px 20px;
     margin-top: 15px;
     width: 100%;
     border: none;
@@ -76,6 +76,7 @@
     font-size: 1rem;
     font-family: $default-font-family;
     font-weight: 400;
+
     &:focus {
       border-bottom: $thin-active-border;
 
@@ -86,6 +87,16 @@
     &.right {
       padding: 0px 0px 2px 2px;
     }
+
+    //option {
+    //  padding: 15px 5px;
+    //  border: 1px solid transparent;
+    //}
+    //
+    //option:hover {
+    //  border: 1px solid var(--hover-border-color);
+    //}
+
   }
 
   label {
@@ -103,6 +114,7 @@
 
 .floating__input:placeholder-shown {
   padding: 15px 20px 2px 5px !important;
+  text-decoration: none !important;
   &.check {
     padding: 15px 2px 2px 20px !important;
     &.right {
