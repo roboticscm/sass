@@ -250,7 +250,6 @@ $skyhub-small-logo-height: 80px;
 // notification
 .notification {
   margin-right: calc(2 * #{$logo-margin});
-  position: relative;
   padding: $default-padding;
   display: flex;
   align-items: center;
@@ -287,22 +286,11 @@ $skyhub-small-logo-height: 80px;
     line-height: $badge-height;
     text-align: center;
     position: absolute;
-    top: 3px;
+    top: -5px;
+    right: -7px;
     z-index: 1;
     font-size: 10px;
     font-weight: 500;
-  }
-
-  .badge-chat {
-    left: calc(#{$notify-icon-width} - 7px);
-  }
-
-  .badge-functional {
-    left: calc(#{$badge-space} + (2 * #{$notify-icon-width}) - 10px);
-  }
-
-  .badge-alert {
-    left: calc(#{$badge-space} + (3 * #{$notify-icon-width}));
   }
 
   .notify-dropdown-item {
@@ -319,17 +307,17 @@ $skyhub-small-logo-height: 80px;
         align-content: center;
         justify-content: center;
         text-align: center;
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         border: $default-border;
         border-radius: 50%;
         &__image {
-          width: 35px;
-          height: 35px;
+          width: 30px;
+          height: 30px;
           border-radius: 50%;
         }
         &__no {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
         }
       }
 
@@ -340,19 +328,41 @@ $skyhub-small-logo-height: 80px;
     }
 
     &__content {
-      margin-top: $large-padding;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      margin-top: 5px;
+
       cursor: pointer;
+
+      display: flex;
+      &__image {
+        margin-top: 5px;
+      }
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__inside {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-left: $large-padding;
+        }
+      }
     }
   }
 
   .notify-dropdown-item-old {
     .notify-dropdown-item__header {
       color: var(--disabled-text-color);
+      &__avatar {
+        &__image {
+          -webkit-filter: grayscale(100%);
+          //filter: blur(1px);
+          filter: opacity(50%);
+        }
+      }
     }
 
     .notify-dropdown-item__content {
@@ -365,7 +375,7 @@ $skyhub-small-logo-height: 80px;
       //text-decoration: line-through;
     }
 
-    .notify-dropdown-item__content {
+    .notify-dropdown-item__content__text {
       text-decoration: line-through;
     }
   }

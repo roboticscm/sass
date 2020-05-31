@@ -311,6 +311,20 @@
   fill: var(--primary);
 }
 
+.large-svg-icon {
+  width: 30px;
+  height: 24px;
+  fill: var(--primary);
+}
+
+.svg-disabled {
+  fill: var(--disabled-text-color);
+}
+
 .readonly-svg-color {
   fill: var(--readonly-text-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
