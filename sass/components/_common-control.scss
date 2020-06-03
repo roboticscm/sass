@@ -306,19 +306,24 @@
 }
 
 .svg-icon {
-  width: 16px;
+  //width: 16px;
   height: 16px;
   fill: var(--primary);
 }
 
 .large-svg-icon {
-  width: 30px;
+  //width: 24px;
   height: 24px;
+  max-height: 24px;
   fill: var(--primary);
 }
 
 .svg-disabled {
   fill: var(--disabled-text-color);
+}
+
+.text-disabled {
+  color: var(--disabled-text-color);
 }
 
 .readonly-svg-color {
@@ -327,4 +332,50 @@
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.status-new {
+  fill: var(--status-new);
+}
+
+.status-wait-for-approve {
+  fill: var(--status-wait-for-approve);
+}
+
+.status-approved {
+  fill: var(--status-approved);
+}
+
+.status-processing{
+  fill: var(--status-processing);
+}
+
+.status-completed {
+  fill: var(--status-completed);
+}
+
+
+.functional-status {
+  display: flex;
+  padding: $default-padding;
+  justify-content: space-between;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    &__counter {
+      width: 30px;
+      border: 1px solid var(--button-border-color);
+      border-radius: $default-border-radius;
+      &__active {
+        border: $default-border !important;
+        color: var(--hover-border-color);
+      }
+    }
+
+
+  }
+
+
 }
