@@ -68,11 +68,12 @@
   --process-color1: rgba(0, 0, 0, 0.3);
   --process-color2: rgba(255, 0, 0, 0.5);;
 
-  --status-new: #BFBFBF;
-  --status-wait-for-approve: #e9db3a;
-  --status-approved: #349711;
-  --status-processing: #60c0f2;
-  --status-completed: #1a6f46;
+  --status-new: #4c4c4c;
+  --status-wait-for-approve: orange;
+  --status-approved: #2f7411;
+  --status-processing: orange;
+  --status-completed: #2f7411;
+  --recent-color: #4c4c4c;
 
   --horizontal-gutter-width: 20px;
   ::placeholder {
@@ -154,10 +155,11 @@
   --process-color2: rgba(255, 0, 0, 0.5);
 
   --status-new: #BFBFBF;
-  --status-wait-for-approve: #e9db3a;
-  --status-approved: #349711;
-  --status-processing: #60c0f2;
-  --status-completed: #1a6f46;
+  --status-wait-for-approve: orange;
+  --status-approved: #2f7411;
+  --status-processing: orange;
+  --status-completed: #2f7411;
+  --recent-color: #BFBFBF;
 
   --horizontal-gutter-width: 20px;
   ::placeholder {

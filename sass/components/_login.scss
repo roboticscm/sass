@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   .login-logo {
     text-align: center;
   }
@@ -26,6 +27,8 @@
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    width: 400px;
+    max-width: 95%;
   }
 
   .login-qrcode {

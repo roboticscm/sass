@@ -100,6 +100,11 @@
       left: 2px;
       position: relative;
     }
+
+    &:hover:not(.disabled) {
+      color: var(--link-color);
+      cursor: pointer;
+    }
   }
 }
 
