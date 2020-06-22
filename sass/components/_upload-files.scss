@@ -8,8 +8,8 @@
   flex-wrap: wrap;
   //background: var(--bg-primary);
   background: transparent;
-  //height: 100%;
-  min-height: 100px;
+  height: 100%;
+  //min-height: 100px;
   .closeable-list {
     &__content {
       border: none;

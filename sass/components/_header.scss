@@ -573,3 +573,58 @@ $skyhub-small-logo-height: 80px;
     }
   }
 }
+
+.mobile-header-detail {
+  display: flex;
+  padding: $default-padding;
+  justify-content: space-between;
+  &__left {
+    display: flex;
+    &__hamburger-menu {
+      display: flex;
+      align-items: center;
+      flex: 0;
+      margin-left: $large-padding;
+      margin-right: calc(2 * #{$large-padding});
+      font-size: 1.5rem;
+    }
+
+    &__department {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &__right{
+    display: flex;
+    text-align: right;
+    &__notify {
+      flex: 0;
+      display: flex;
+      align-items: center;
+      padding-top: 3px;
+      .notification {
+        margin-right: $large-padding;
+        margin-left: calc(2 * #{$large-padding});
+        .notify-icon {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__avatar {
+      flex: 0;
+      margin-left: $large-padding;
+      .user-profiles-wrapper {
+        margin-right: $default-padding;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .layout-horizontal-gutter {
+    background: var(--bg-list);
+  }
+}

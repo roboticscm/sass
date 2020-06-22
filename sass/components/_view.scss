@@ -205,6 +205,7 @@
   .view-right-main {
     height: auto;
     overflow: visible;
+    margin-top: $default-padding;
   }
 
   .view-content-controller,
@@ -235,4 +236,24 @@
   pointer-events: none;
   font-weight: 500;
   z-index: calc(#{$highest-z-index} + 100);
+}
+
+.view-navigation-controller {
+  background: var(--bg-list);
+  display: flex;
+  margin-left: -6px;
+  margin-right: -6px;
+  &__arrow {
+    padding: $large-padding;
+  }
+
+  &__title {
+    padding: $large-padding;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 1.8rem;
+  }
 }
