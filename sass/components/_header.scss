@@ -542,7 +542,7 @@ $skyhub-small-logo-height: 80px;
 
   &__bottom {
     display: flex;
-    padding-left: $default-padding;
+    //padding-left: $default-padding;
     &__hamburger-menu {
       display: flex;
       align-items: center;
@@ -567,7 +567,7 @@ $skyhub-small-logo-height: 80px;
         margin-right: $large-padding;
         margin-left: calc(2 * #{$large-padding});
         .notify-icon {
-          margin-right: 0;
+          margin-right: $default-padding;
         }
       }
     }

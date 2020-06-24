@@ -23,6 +23,9 @@
     font-family: $default-font-family;
     font-weight: 400;
     color: var(--primary);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     &:focus {
       border-bottom: $thin-active-border;
       padding: 15px 2px 2px 20px ;

@@ -28,7 +28,6 @@
   padding-right: $default-padding;
 }
 
-
 .view-container-inside-form-2-col {
   height: 100%;
   width: 100%;
@@ -218,6 +217,7 @@
   .view-container-2-col,
   .view-container-3-col {
     overflow: auto;
+    align-content: start;
   }
 
   .left-grid-vertical-gutter,
