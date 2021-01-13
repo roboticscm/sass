@@ -1,9 +1,9 @@
 .table {
   border-collapse: collapse;
   width: 100%;
-  overflow: auto;
+  // overflow: auto;
   color: var(--primary);
-  background: var(--bg-primary);
+  // background: var(--bg-primary);
 }
 
 .table thead th {
@@ -13,6 +13,10 @@
   resize: horizontal;
   overflow: hidden;
   cursor: pointer;
+  padding: $default-padding;
+  text-align: center;
+  // background-color: var(--bg-primary);
+  // color: var(--primary);
 }
 
 .table .freeze {
@@ -48,7 +52,7 @@
 
 .table td,
 .table th {
-  padding: $default-padding;
+  padding:  $default-padding;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -79,14 +83,6 @@
   background-color: var(--table-row-bgcolor);
 }
 
-.table thead th {
-  padding: $default-padding;
-  text-align: center;
-  //background-color: var(--bg-secondary);
-  //color: var(--secondary);
-  background-color: var(--bg-primary);
-  color: var(--primary);
-}
 
 .table tr:not(.selected) th {
   padding: $default-padding;

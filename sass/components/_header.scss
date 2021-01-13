@@ -45,6 +45,7 @@
     &__left {
       flex: 0;
       display: flex;
+      min-width: 300px;
     }
     &__center {
       padding-top: 3px;
@@ -107,8 +108,9 @@ $skyhub-small-logo-height: 80px;
   margin-right: calc(2 * #{$logo-margin});
   padding: $default-padding;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+
   &__logo {
     padding: $large-padding;
     img {
@@ -121,6 +123,9 @@ $skyhub-small-logo-height: 80px;
       color: var(--secondary);
     }
   }
+
+ 
+
   &:hover {
     .left-dropdown-content {
       display: block;

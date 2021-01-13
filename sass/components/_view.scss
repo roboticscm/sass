@@ -185,25 +185,33 @@
   background-size: $dot-space $dot-space;
 }
 
+.left-content-main-table {
+  height: calc(100% - 30px);
+}
+
 @media screen and (max-width: 768px) {
+  .left-content-main-table {
+    height: calc(100%);
+  }
+
   .view-left {
     grid-column: 1 / span 5;
-    overflow: visible;
+    // overflow: visible;
   }
   .view-content {
     grid-column: 1 / span 5;
-    overflow: visible;
+    // overflow: visible;
   }
   .view-right {
     grid-column: 1 / span 5;
-    overflow: visible;
+    // overflow: visible;
   }
 
   .view-content-main,
   .view-left-main,
   .view-right-main {
-    height: auto;
-    overflow: visible;
+    // height: 100%;
+    // overflow: auto;
     margin-top: $default-padding;
   }
 
@@ -216,7 +224,7 @@
   .view-container,
   .view-container-2-col,
   .view-container-3-col {
-    overflow: auto;
+    // overflow: visible;
     align-content: start;
   }
 
@@ -227,7 +235,7 @@
 }
 
 
-.nickname {
+.water-mark {
   position: fixed;
   bottom: 30px;
   right: 40px;
